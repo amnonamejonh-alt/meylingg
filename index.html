@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reanmore</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .container{
+            background-color: rgb(255, 237, 240);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 250px;
+        }
+        .btn{
+            padding: 0.5rem 2rem;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btnPrimary{
+            color: white;
+            background-color: purple;
+        }
+        .btnSecondary{
+            padding: 0.5rem 1rem;
+            background-color: rgb(255, 217, 223);
+        }
+        .moving{
+            margin-left: 90px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h2 class="text">do you love me?</h2>
+        <button class="btn btnPrimary">Yes</button>
+        <button class="btn btnSecondary">NO</button>
+    </section>
+    <script>
+        const btnAgree = document.querySelector(".btnPrimary");
+        const btnDisagree = document.querySelector(".btnSecondary");
+        const text = document.querySelector(".text");
+
+        btnAgree.addEventListener("click", ()=>{
+            text.innerText = "i love you too!";
+        })
+        btnDisagree.addEventListener("mouseover", ()=>{
+        btnDisagree.classList.toggle("moving");
+        })
+    </script>
+</body>
+</html>
